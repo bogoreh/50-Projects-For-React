@@ -1,0 +1,48 @@
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+  border-radius: 20px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.featured-products h2 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .featured-products h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,43 @@
+.stock-table {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.stock-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table th {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+}
+
+.stock-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.stock-table tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.symbol {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.positive {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.negative {
+  color: #f87171;
+  font-weight: 600;
+}
