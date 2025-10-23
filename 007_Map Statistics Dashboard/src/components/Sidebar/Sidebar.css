@@ -1,0 +1,82 @@
+.sidebar {
+  width: 300px;
+  background: #1e293b;
+  border-right: 1px solid #334155;
+  overflow-y: auto;
+}
+
+.sidebar__header {
+  padding: 20px;
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar__header h2 {
+  color: #f8fafc;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #334155;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+.countries-list {
+  padding: 10px 0;
+}
+
+.country-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.country-item:hover {
+  background: #334155;
+}
+
+.country-item.active {
+  background: #1e40af;
+  border-left-color: #60a5fa;
+}
+
+.country-flag {
+  font-size: 1.2rem;
+  margin-right: 12px;
+}
+
+.country-name {
+  flex: 1;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.country-cases {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  background: #475569;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
