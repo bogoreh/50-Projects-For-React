@@ -1,0 +1,196 @@
+.piano-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.piano {
+  position: relative;
+  display: flex;
+  background: linear-gradient(145deg, #2c3e50, #34495e);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.white-keys {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.black-keys {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.piano-key {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.piano-key:active {
+  transform: translateY(1px);
+}
+
+.piano-key--white {
+  width: 70px;
+  height: 250px;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  margin: 0 1px;
+  box-shadow: 
+    inset 0 -5px 10px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+}
+
+.piano-key--white.piano-key--active {
+  background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+  box-shadow: 
+    inset 0 -2px 5px rgba(0, 0, 0, 0.2),
+    0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.piano-key--black {
+  width: 45px;
+  height: 160px;
+  background: linear-gradient(to bottom, #2c3e50, #34495e);
+  border: 1px solid #1a252f;
+  border-radius: 0 0 6px 6px;
+  margin: 0 -22.5px;
+  box-shadow: 
+    inset 0 -5px 10px rgba(0, 0, 0, 0.3),
+    0 4px 6px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.piano-key--black.piano-key--active {
+  background: linear-gradient(to bottom, #3498db, #2980b9);
+  box-shadow: 
+    inset 0 -2px 5px rgba(0, 0, 0, 0.4),
+    0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Position black keys between white keys */
+.piano-key--black:nth-child(1) { transform: translateX(85px); }
+.piano-key--black:nth-child(2) { transform: translateX(155px); }
+.piano-key--black:nth-child(3) { transform: translateX(295px); }
+.piano-key--black:nth-child(4) { transform: translateX(365px); }
+.piano-key--black:nth-child(5) { transform: translateX(435px); }
+
+.piano-key-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.piano-key-note {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.piano-key--white .piano-key-note {
+  color: #666;
+}
+
+.piano-key--black .piano-key-note {
+  color: #fff;
+}
+
+.piano-key--white .piano-key-key {
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.piano-key--black .piano-key-key {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.piano-key--active .piano-key-key {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.keyboard-help {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.keyboard-help p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .piano {
+    transform: scale(0.8);
+    padding: 1rem;
+  }
+  
+  .piano-key--white {
+    width: 50px;
+    height: 200px;
+  }
+  
+  .piano-key--black {
+    width: 35px;
+    height: 120px;
+    margin: 0 -17.5px;
+  }
+  
+  .piano-key--black:nth-child(1) { transform: translateX(60px); }
+  .piano-key--black:nth-child(2) { transform: translateX(110px); }
+  .piano-key--black:nth-child(3) { transform: translateX(210px); }
+  .piano-key--black:nth-child(4) { transform: translateX(260px); }
+  .piano-key--black:nth-child(5) { transform: translateX(310px); }
+  
+  .keyboard-help {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .keyboard-help p {
+    font-size: 0.9rem;
+  }
+}
