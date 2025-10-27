@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.app h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0 #000;
+  letter-spacing: 2px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-status {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 3px solid #ffd700;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status-item .label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.status-item .value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.reset-button {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-board {
+  position: relative;
+  border: 8px solid #8b4513;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  background: #90ee90;
+  outline: none;
+}
+
+.cell {
+  position: absolute;
+  background-size: cover;
+}
+
+.cell.grass {
+  background-color: #90ee90;
+  background-image: url('/images/grass.png');
+}
+
+.cell.road {
+  background-color: #696969;
+  background-image: url('/images/road.png');
+}
+
+.cell.water {
+  background-color: #4169e1;
+  background-image: url('/images/water.png');
+}
+
+.goal-area {
+  position: absolute;
+  background: linear-gradient(45deg, #1e90ff, #00bfff);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.player {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.player.dead {
+  animation: shake 0.5s ease-in-out;
+  opacity: 0.7;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.vehicle {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: left 0.05s linear;
+  z-index: 5;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.vehicle.car1 {
+  background-color: #ff4444;
+}
+
+.vehicle.car2 {
+  background-color: #4444ff;
+}
+
+.vehicle.truck {
+  background-color: #44aa44;
+}
+
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.game-over-message {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border: 3px solid #ffd700;
+}
+
+.game-over-message h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.game-over-message p {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.game-over-message button {
+  background: linear-gradient(45deg, #ffd700, #ffa500);
+  color: #333;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-over-message button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.controls {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffd700;
+}
+
+.controls p {
+  margin: 5px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app h1 {
+    font-size: 2rem;
+  }
+  
+  .game-board {
+    width: 90vw !important;
+    height: 90vw !important;
+  }
+  
+  .game-status {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
