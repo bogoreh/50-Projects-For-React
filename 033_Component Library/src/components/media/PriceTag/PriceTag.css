@@ -1,0 +1,25 @@
+.price-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.price-tag__original {
+  text-decoration: line-through;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.price-tag__final {
+  color: #10b981;
+  font-size: 1.125rem;
+}
+
+.price-tag__discount {
+  background: #ec4899;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
