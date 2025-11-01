@@ -1,0 +1,149 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.layout header {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.layout header h1 {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+.layout nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.layout nav button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.layout nav button:hover {
+  background: #2980b9;
+}
+
+.page-content {
+  text-align: center;
+}
+
+.counter-section {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 2px solid #e9ecef;
+}
+
+.count-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 2rem 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: #27ae60;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #219a52;
+}
+
+.btn-secondary {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #c0392b;
+}
+
+.btn-reset {
+  background: #95a5a6;
+  color: white;
+}
+
+.btn-reset:hover {
+  background: #7f8c8d;
+}
+
+.features-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: #ecf0f1;
+  border-radius: 8px;
+}
+
+.feature-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.feature-btn {
+  background: #9b59b6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.feature-btn:hover {
+  background: #8e44ad;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .button-group, .feature-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .layout nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .count-display {
+    font-size: 2rem;
+  }
+}

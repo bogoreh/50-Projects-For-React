@@ -1,0 +1,1 @@
+export { shareText } from './shareUtils';

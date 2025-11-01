@@ -1,0 +1,1 @@
+export { HighlightableText } from './HighlightableText';
