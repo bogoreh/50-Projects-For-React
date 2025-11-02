@@ -1,0 +1,42 @@
+.tesla-app {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background: #111;
+  border-top: 1px solid #333;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-btn.active {
+  background: #333;
+}
+
+.nav-btn:hover {
+  background: #222;
+}

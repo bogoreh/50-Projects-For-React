@@ -1,0 +1,52 @@
+.health-bar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hearts-container {
+  display: flex;
+  gap: 2px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #444;
+}
+
+.heart {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+.stamina-wheel {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid #444;
+}
+
+.stamina-circle {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #4a90e2;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.stamina-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(to top, #4a90e2, #87ceeb);
+  border-radius: 50%;
+}

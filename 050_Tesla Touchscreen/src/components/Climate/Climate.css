@@ -1,0 +1,89 @@
+.climate {
+  padding: 20px;
+}
+
+.climate h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.temperature-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.temp-btn {
+  background: #333;
+  border: none;
+  color: white;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.temperature-display {
+  text-align: center;
+}
+
+.temp-value {
+  display: block;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.ac-status {
+  color: #888;
+  font-size: 14px;
+}
+
+.climate-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.climate-btn, .ac-btn {
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ac-btn.active {
+  background: #0066cc;
+  border-color: #0099ff;
+}
+
+.seat-controls {
+  margin-top: 40px;
+}
+
+.seat-controls h3 {
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.seat-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.seat-btn {
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}

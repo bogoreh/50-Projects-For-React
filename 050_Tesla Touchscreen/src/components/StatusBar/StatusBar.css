@@ -1,0 +1,12 @@
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #111;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+}
+
+.car-status span {
+  margin-left: 20px;
+}
