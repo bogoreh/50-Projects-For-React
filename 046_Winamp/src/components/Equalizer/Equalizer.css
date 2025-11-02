@@ -1,0 +1,67 @@
+.equalizer {
+  width: 300px;
+}
+
+.eq-bands {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.eq-band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.eq-frequency {
+  font-size: 10px;
+}
+
+.eq-slider {
+  height: 80px;
+  writing-mode: bt-lr;
+  direction: rtl;
+}
+
+.eq-value {
+  font-size: 10px;
+  width: 30px;
+  text-align: center;
+}
+
+.eq-presets {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.preset-select {
+  flex: 1;
+  padding: 2px;
+  border: 2px inset;
+  background: #fff;
+  font-family: 'MS Sans Serif';
+  font-size: 11px;
+}
+
+.eq-btn {
+  padding: 2px 8px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  font-family: 'MS Sans Serif';
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.eq-btn:active {
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #dfdfdf;
+  border-bottom-color: #dfdfdf;
+}

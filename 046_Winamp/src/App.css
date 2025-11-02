@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'MS Sans Serif', Arial, sans-serif;
+  background: #008080;
+  color: #000;
+  user-select: none;
+}
+
+.app {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+}
+
+.login-screen h1 {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 24px;
+}
+
+.login-btn {
+  padding: 8px 16px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-top-color: #dfdfdf;
+  border-left-color: #dfdfdf;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  font-family: 'MS Sans Serif';
+  cursor: pointer;
+}
+
+.login-btn:active {
+  border-top-color: #808080;
+  border-left-color: #808080;
+  border-right-color: #dfdfdf;
+  border-bottom-color: #dfdfdf;
+}
