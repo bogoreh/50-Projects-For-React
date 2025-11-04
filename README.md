@@ -92,5 +92,3 @@
 48. [Zelda UI](./049_Zelda%20UI) – Styled game UI interface.
 49. [Tesla Touchscreen](./050_Tesla%20Touchscreen) – Vehicle console UI.
 50. [Map Data Board](./???) – *if you have a missing 050, replace this with correct project folder*.
-**tell me: what is folder name + label string for #050 exactly?**
-I will then replace that last line and give you the final ready-paste version with no placeholders.
